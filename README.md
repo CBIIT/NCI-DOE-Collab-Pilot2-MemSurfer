@@ -12,7 +12,7 @@ MemSurfer is an analysis tool that predates the JDACS4C pilot projects, but was 
 
 ### User Community:
 
-Researchers who want to compute and analyze membrane surfaces or study their properties for large computational jobs such as those carried out by the JDACS4C Pilot 2 program.
+Researchers who want to compute and analyze membrane surfaces or study their properties for large computational jobs such as those carried out by the [JDACS4C Pilot 2 program](https://datascience.cancer.gov/collaborations/joint-design-advanced-computing/molecular-pilot).
 
 ### Usability:
 
