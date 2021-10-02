@@ -54,7 +54,7 @@ and then running:
 sh install_deps.sh
 ```
 
-The next two dependencies, `eigen` and `cgal`, depend on this version of `boost`, and to ensure this installation is picked up, you should load the `boost` environment correctly. Place the following into a file called `$MEMSURFER_INSTALL/MemSurfer/load_boost_env.sh`:
+The next two dependencies, `eigen` and `cgal`, depend on this version of `boost`, and to ensure this installation is picked up, you should load the `boost` environment correctly by first placing the following into a file called `$MEMSURFER_INSTALL/MemSurfer/load_boost_env.sh`:
 
 ```bash
 #!/bin/bash
