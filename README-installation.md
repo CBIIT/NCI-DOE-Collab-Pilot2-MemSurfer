@@ -78,7 +78,7 @@ Now source this script,
 source $MEMSURFER_INSTALL/MemSurfer/load_boost_env.sh
 ```
 
-make these changes in `install_deps.sh`:
+make these changes in `install_deps.sh`,
 
 ```bash
 INSTALL_BOOST=false
