@@ -70,7 +70,7 @@ export CMAKE_INCLUDE_PATH="$BOOSTINC:$CMAKE_INCLUDE_PATH"
 export CPATH="$BOOSTINC:$CPATH"
 ```
 
-where you have correctly exported the value of `$MEMSURFER_INSTALL` so that this script works (see `[load_boost_env.sh](./load_boost_env.sh)` in this directory for an example).
+where you have correctly exported the value of `$MEMSURFER_INSTALL` so that this script works (see [load_boost_env.sh](./load_boost_env.sh) in this directory for an example).
 
 Now source this script,
 
