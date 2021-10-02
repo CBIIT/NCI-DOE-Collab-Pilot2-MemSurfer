@@ -3,8 +3,8 @@
 # ------------------------------------------------------------------------------
 # parameters to control this script!
 
-INSTALL_VTK=true
-INSTALL_CGAL=false
+INSTALL_VTK=false
+INSTALL_CGAL=true
 INSTALL_BOOST=false
 INSTALL_EIGEN=false
 NPROCS=2

@@ -3,10 +3,10 @@
 # ------------------------------------------------------------------------------
 # parameters to control this script!
 
-INSTALL_VTK=true
+INSTALL_VTK=false
 INSTALL_CGAL=false
 INSTALL_BOOST=false
-INSTALL_EIGEN=false
+INSTALL_EIGEN=true
 NPROCS=2
 
 

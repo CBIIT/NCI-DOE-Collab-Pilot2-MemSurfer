@@ -14,3 +14,6 @@ memsurfer/memsurfer_wrap.cpp
 *vtp
 *off
 *.pvcc
+*.tar.gz
+*.zip
+external2

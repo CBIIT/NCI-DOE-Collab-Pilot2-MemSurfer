@@ -1,0 +1,12 @@
+(memsurfer2) weismanal@cn0857:~/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer $ sh install_deps.sh
+
+> Installing MemSurfer's dependencies for (weismanal) on (cn0857). platform = (Linux)
+    > Installation path = (/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external)
+    > Using gcc = (/usr/local/GCC/7.3.0/bin/gcc) [gcc (GCC) 7.3.0]
+    > Using g++ = (/usr/local/GCC/7.3.0/bin/g++) [g++ (GCC) 7.3.0]
+    > Using python = (/data/BIDS-HPC/public/software/conda/envs/memsurfer2/bin/python) [Python 3.7.11]
+    (VTK-8.1.2) Downloading (https://www.vtk.org/files/release/8.1/VTK-8.1.2.tar.gz)
+    (VTK-8.1.2) Extracting (VTK-8.1.2.tar)
+    (VTK-8.1.2) Configuring (/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/downloads/VTK-8.1.2.tar/build-20210908-124614)
+    (VTK-8.1.2) Building and Installing
+    (VTK-8.1.2) Successfully installed at (/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external).

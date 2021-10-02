@@ -1,0 +1,137 @@
+(memsurfer2) weismanal@cn0914:~/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer $ CC=`which gcc` CXX=`which g++` LDCXXSHARED="`which g++` -bundle -undefined dynamic_lookup" python setup.py install
+> Installing MemSurfer for (weismanal) on (cn0914) (platform=linux)
+  > MemSurfer = (/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer)
+  > VTK_ROOT = (/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external)
+  > CGAL_ROOT = (/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external)
+  > EIGEN_ROOT = (/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external)
+  > BOOST_ROOT = (/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external)
+Compiling /gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson/pypoisson.pyx because it changed.
+[1/1] Cythonizing /gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson/pypoisson.pyx
+warning: pypoisson/pypoisson.pyx:149:67: Index should be typed for more efficient access
+running install
+running bdist_egg
+running egg_info
+creating memsurfer.egg-info
+writing memsurfer.egg-info/PKG-INFO
+writing dependency_links to memsurfer.egg-info/dependency_links.txt
+writing top-level names to memsurfer.egg-info/top_level.txt
+writing manifest file 'memsurfer.egg-info/SOURCES.txt'
+reading manifest file 'memsurfer.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+adding license file 'NOTICE'
+writing manifest file 'memsurfer.egg-info/SOURCES.txt'
+installing library code to build/bdist.linux-x86_64/egg
+running install_lib
+running build_py
+running build_ext
+building 'pypoisson' extension
+creating build
+creating build/temp.linux-x86_64-3.7
+creating build/temp.linux-x86_64-3.7/gpfs
+creating build/temp.linux-x86_64-3.7/gpfs/gsfs10
+creating build/temp.linux-x86_64-3.7/gpfs/gsfs10/users
+creating build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal
+creating build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook
+creating build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08
+creating build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2
+creating build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer
+creating build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson
+creating build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson/PoissonRecon_v6_13
+creating build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson/PoissonRecon_v6_13/src
+/usr/local/GCC/7.3.0/bin/gcc -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -D__linux__=1 -Ipypoisson -I/data/BIDS-HPC/public/software/conda/envs/memsurfer2/lib/python3.7/site-packages/numpy/core/include -I/data/BIDS-HPC/public/software/conda/envs/memsurfer2/include/python3.7m -c /gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson/pypoisson.cpp -o build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson/pypoisson.o -w -fopenmp
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+/usr/local/GCC/7.3.0/bin/gcc -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -D__linux__=1 -Ipypoisson -I/data/BIDS-HPC/public/software/conda/envs/memsurfer2/lib/python3.7/site-packages/numpy/core/include -I/data/BIDS-HPC/public/software/conda/envs/memsurfer2/include/python3.7m -c /gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson/PoissonRecon_v6_13/src/Factor.cpp -o build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson/PoissonRecon_v6_13/src/Factor.o -w -fopenmp
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+/usr/local/GCC/7.3.0/bin/gcc -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -D__linux__=1 -Ipypoisson -I/data/BIDS-HPC/public/software/conda/envs/memsurfer2/lib/python3.7/site-packages/numpy/core/include -I/data/BIDS-HPC/public/software/conda/envs/memsurfer2/include/python3.7m -c /gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson/PoissonRecon_v6_13/src/PlyFile.cpp -o build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson/PoissonRecon_v6_13/src/PlyFile.o -w -fopenmp
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+/usr/local/GCC/7.3.0/bin/gcc -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -D__linux__=1 -Ipypoisson -I/data/BIDS-HPC/public/software/conda/envs/memsurfer2/lib/python3.7/site-packages/numpy/core/include -I/data/BIDS-HPC/public/software/conda/envs/memsurfer2/include/python3.7m -c /gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson/PoissonRecon_v6_13/src/PoissonReconLib.cpp -o build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson/PoissonRecon_v6_13/src/PoissonReconLib.o -w -fopenmp
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson/PoissonRecon_v6_13/src/PoissonReconLib.cpp:76:87: note: #pragma message: [WARNING] Setting default full depth to 5
+ #pragma message ( "[WARNING] Setting default full depth to " XSTR(DEFAULT_FULL_DEPTH) )
+                                                                                       ^
+/usr/local/GCC/7.3.0/bin/gcc -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -D__linux__=1 -Ipypoisson -I/data/BIDS-HPC/public/software/conda/envs/memsurfer2/lib/python3.7/site-packages/numpy/core/include -I/data/BIDS-HPC/public/software/conda/envs/memsurfer2/include/python3.7m -c /gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson/PoissonRecon_v6_13/src/CmdLineParser.cpp -o build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson/PoissonRecon_v6_13/src/CmdLineParser.o -w -fopenmp
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+/usr/local/GCC/7.3.0/bin/gcc -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -D__linux__=1 -Ipypoisson -I/data/BIDS-HPC/public/software/conda/envs/memsurfer2/lib/python3.7/site-packages/numpy/core/include -I/data/BIDS-HPC/public/software/conda/envs/memsurfer2/include/python3.7m -c /gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson/PoissonRecon_v6_13/src/MarchingCubes.cpp -o build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson/PoissonRecon_v6_13/src/MarchingCubes.o -w -fopenmp
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson/PoissonRecon_v6_13/src/MarchingCubes.cpp:306:115: note: #pragma message: [WARNING] Not clear if MarchingSquares::edgeMask and MarchingSquares::edges are set correctly
+ #pragma message ( "[WARNING] Not clear if MarchingSquares::edgeMask and MarchingSquares::edges are set correctly" )
+                                                                                                                   ^
+/usr/local/GCC/7.3.0/bin/gcc -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -D__linux__=1 -Ipypoisson -I/data/BIDS-HPC/public/software/conda/envs/memsurfer2/lib/python3.7/site-packages/numpy/core/include -I/data/BIDS-HPC/public/software/conda/envs/memsurfer2/include/python3.7m -c /gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson/PoissonRecon_v6_13/src/Geometry.cpp -o build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson/PoissonRecon_v6_13/src/Geometry.o -w -fopenmp
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+creating build/lib.linux-x86_64-3.7
+/usr/local/GCC/7.3.0/bin/g++ -pthread -shared -B /data/BIDS-HPC/public/software/conda/envs/memsurfer2/compiler_compat -L/data/BIDS-HPC/public/software/conda/envs/memsurfer2/lib -Wl,-rpath=/data/BIDS-HPC/public/software/conda/envs/memsurfer2/lib -Wl,--no-as-needed -Wl,--sysroot=/ build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson/pypoisson.o build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson/PoissonRecon_v6_13/src/Factor.o build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson/PoissonRecon_v6_13/src/PlyFile.o build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson/PoissonRecon_v6_13/src/PoissonReconLib.o build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson/PoissonRecon_v6_13/src/CmdLineParser.o build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson/PoissonRecon_v6_13/src/MarchingCubes.o build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/pypoisson/PoissonRecon_v6_13/src/Geometry.o -o build/lib.linux-x86_64-3.7/pypoisson.so -fopenmp
+building 'memsurfer._memsurfer_cmod' extension
+swigging /gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/memsurfer.i to /gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/memsurfer_wrap.cpp
+swig -python -c++ -I/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/src -o /gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/memsurfer_wrap.cpp /gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/memsurfer.i
+creating build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer
+creating build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/src
+/usr/local/GCC/7.3.0/bin/gcc -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DVTK_AVAILABLE=1 -DCGAL_AVAILABLE=1 -I/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/src -I/data/BIDS-HPC/public/software/conda/envs/memsurfer2/lib/python3.7/site-packages/numpy/core/include -I/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/include -I/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/include/eigen3 -I/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/include -I/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/include/vtk-8.1 -I/opt/local/include -I/data/BIDS-HPC/public/software/conda/envs/memsurfer2/include/python3.7m -c /gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/memsurfer_wrap.cpp -o build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/memsurfer_wrap.o -std=c++11 -Wno-parentheses -Wno-uninitialized -Wno-inconsistent-missing-override -Wno-deprecated-declarations -Wno-unknown-pragmas -Wno-misleading-indentation -Wno-unknown-warning-option
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-unknown-warning-option’
+cc1plus: warning: unrecognized command line option ‘-Wno-inconsistent-missing-override’
+/usr/local/GCC/7.3.0/bin/gcc -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DVTK_AVAILABLE=1 -DCGAL_AVAILABLE=1 -I/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/src -I/data/BIDS-HPC/public/software/conda/envs/memsurfer2/lib/python3.7/site-packages/numpy/core/include -I/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/include -I/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/include/eigen3 -I/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/include -I/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/include/vtk-8.1 -I/opt/local/include -I/data/BIDS-HPC/public/software/conda/envs/memsurfer2/include/python3.7m -c /gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/src/PointSet.cpp -o build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/src/PointSet.o -std=c++11 -Wno-parentheses -Wno-uninitialized -Wno-inconsistent-missing-override -Wno-deprecated-declarations -Wno-unknown-pragmas -Wno-misleading-indentation -Wno-unknown-warning-option
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-unknown-warning-option’
+cc1plus: warning: unrecognized command line option ‘-Wno-inconsistent-missing-override’
+/usr/local/GCC/7.3.0/bin/gcc -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DVTK_AVAILABLE=1 -DCGAL_AVAILABLE=1 -I/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/src -I/data/BIDS-HPC/public/software/conda/envs/memsurfer2/lib/python3.7/site-packages/numpy/core/include -I/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/include -I/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/include/eigen3 -I/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/include -I/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/include/vtk-8.1 -I/opt/local/include -I/data/BIDS-HPC/public/software/conda/envs/memsurfer2/include/python3.7m -c /gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/src/TriMesh.cpp -o build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/src/TriMesh.o -std=c++11 -Wno-parentheses -Wno-uninitialized -Wno-inconsistent-missing-override -Wno-deprecated-declarations -Wno-unknown-pragmas -Wno-misleading-indentation -Wno-unknown-warning-option
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-unknown-warning-option’
+cc1plus: warning: unrecognized command line option ‘-Wno-inconsistent-missing-override’
+/usr/local/GCC/7.3.0/bin/gcc -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DVTK_AVAILABLE=1 -DCGAL_AVAILABLE=1 -I/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/src -I/data/BIDS-HPC/public/software/conda/envs/memsurfer2/lib/python3.7/site-packages/numpy/core/include -I/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/include -I/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/include/eigen3 -I/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/include -I/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/include/vtk-8.1 -I/opt/local/include -I/data/BIDS-HPC/public/software/conda/envs/memsurfer2/include/python3.7m -c /gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/src/TriMesh_cgal.cpp -o build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/src/TriMesh_cgal.o -std=c++11 -Wno-parentheses -Wno-uninitialized -Wno-inconsistent-missing-override -Wno-deprecated-declarations -Wno-unknown-pragmas -Wno-misleading-indentation -Wno-unknown-warning-option
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-unknown-warning-option’
+cc1plus: warning: unrecognized command line option ‘-Wno-inconsistent-missing-override’
+/usr/local/GCC/7.3.0/bin/gcc -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DVTK_AVAILABLE=1 -DCGAL_AVAILABLE=1 -I/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/src -I/data/BIDS-HPC/public/software/conda/envs/memsurfer2/lib/python3.7/site-packages/numpy/core/include -I/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/include -I/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/include/eigen3 -I/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/include -I/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/include/vtk-8.1 -I/opt/local/include -I/data/BIDS-HPC/public/software/conda/envs/memsurfer2/include/python3.7m -c /gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/src/TriMesh_kde.cpp -o build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/src/TriMesh_kde.o -std=c++11 -Wno-parentheses -Wno-uninitialized -Wno-inconsistent-missing-override -Wno-deprecated-declarations -Wno-unknown-pragmas -Wno-misleading-indentation -Wno-unknown-warning-option
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-unknown-warning-option’
+cc1plus: warning: unrecognized command line option ‘-Wno-inconsistent-missing-override’
+/usr/local/GCC/7.3.0/bin/gcc -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DVTK_AVAILABLE=1 -DCGAL_AVAILABLE=1 -I/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/src -I/data/BIDS-HPC/public/software/conda/envs/memsurfer2/lib/python3.7/site-packages/numpy/core/include -I/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/include -I/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/include/eigen3 -I/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/include -I/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/include/vtk-8.1 -I/opt/local/include -I/data/BIDS-HPC/public/software/conda/envs/memsurfer2/include/python3.7m -c /gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/src/TriMesh_vtk.cpp -o build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/src/TriMesh_vtk.o -std=c++11 -Wno-parentheses -Wno-uninitialized -Wno-inconsistent-missing-override -Wno-deprecated-declarations -Wno-unknown-pragmas -Wno-misleading-indentation -Wno-unknown-warning-option
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-unknown-warning-option’
+cc1plus: warning: unrecognized command line option ‘-Wno-inconsistent-missing-override’
+creating build/lib.linux-x86_64-3.7/memsurfer
+/usr/local/GCC/7.3.0/bin/g++ -pthread -shared -B /data/BIDS-HPC/public/software/conda/envs/memsurfer2/compiler_compat -L/data/BIDS-HPC/public/software/conda/envs/memsurfer2/lib -Wl,-rpath=/data/BIDS-HPC/public/software/conda/envs/memsurfer2/lib -Wl,--no-as-needed -Wl,--sysroot=/ build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/memsurfer_wrap.o build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/src/PointSet.o build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/src/TriMesh.o build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/src/TriMesh_cgal.o build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/src/TriMesh_kde.o build/temp.linux-x86_64-3.7/gpfs/gsfs10/users/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/memsurfer/src/TriMesh_vtk.o -L/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/lib -L/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/lib64 -lvtkIOCore-8.1 -lvtkCommonMathPython37D-8.1 -lvtkCommonComputationalGeometryPython37D-8.1 -lvtkCommonDataModel-8.1 -lvtksys-8.1 -lvtkCommonCorePython37D-8.1 -lvtkFiltersSources-8.1 -lvtkFiltersCore-8.1 -lvtkzlib-8.1 -lvtkFiltersGeneralPython37D-8.1 -lvtkCommonCore-8.1 -lvtkCommonMiscPython37D-8.1 -lvtkCommonTransformsPython37D-8.1 -lvtkIOXMLParser-8.1 -lvtkIOXMLParserPython37D-8.1 -lvtkCommonDataModelPython37D-8.1 -lvtkCommonComputationalGeometry-8.1 -lvtkIOXML-8.1 -lvtkFiltersSourcesPython37D-8.1 -lvtkFiltersCorePython37D-8.1 -lvtkCommonMisc-8.1 -lvtkCommonExecutionModelPython37D-8.1 -lvtkexpat-8.1 -lvtkCommonExecutionModel-8.1 -lvtkIOXMLPython37D-8.1 -lvtkCommonTransforms-8.1 -lvtkFiltersGeneral-8.1 -lvtkCommonSystem-8.1 -lvtkCommonSystemPython37D-8.1 -lvtkIOCorePython37D-8.1 -lvtkCommonMath-8.1 -lvtklz4-8.1 -lvtkWrappingPython37Core-8.1 -lCGAL -lCGAL_ImageIO -lCGAL_Core -o build/lib.linux-x86_64-3.7/memsurfer/_memsurfer_cmod.so -std=c++11
+copying memsurfer/memsurfer_cmod.py -> build/lib.linux-x86_64-3.7/memsurfer
+copying memsurfer/__init__.py -> build/lib.linux-x86_64-3.7/memsurfer
+copying memsurfer/utils.py -> build/lib.linux-x86_64-3.7/memsurfer
+copying memsurfer/membrane.py -> build/lib.linux-x86_64-3.7/memsurfer
+copying memsurfer/trimesh.py -> build/lib.linux-x86_64-3.7/memsurfer
+creating build/bdist.linux-x86_64
+creating build/bdist.linux-x86_64/egg
+copying build/lib.linux-x86_64-3.7/pypoisson.so -> build/bdist.linux-x86_64/egg
+creating build/bdist.linux-x86_64/egg/memsurfer
+copying build/lib.linux-x86_64-3.7/memsurfer/memsurfer_cmod.py -> build/bdist.linux-x86_64/egg/memsurfer
+copying build/lib.linux-x86_64-3.7/memsurfer/__init__.py -> build/bdist.linux-x86_64/egg/memsurfer
+copying build/lib.linux-x86_64-3.7/memsurfer/utils.py -> build/bdist.linux-x86_64/egg/memsurfer
+copying build/lib.linux-x86_64-3.7/memsurfer/membrane.py -> build/bdist.linux-x86_64/egg/memsurfer
+copying build/lib.linux-x86_64-3.7/memsurfer/_memsurfer_cmod.so -> build/bdist.linux-x86_64/egg/memsurfer
+copying build/lib.linux-x86_64-3.7/memsurfer/trimesh.py -> build/bdist.linux-x86_64/egg/memsurfer
+byte-compiling build/bdist.linux-x86_64/egg/memsurfer/memsurfer_cmod.py to memsurfer_cmod.cpython-37.pyc
+byte-compiling build/bdist.linux-x86_64/egg/memsurfer/__init__.py to __init__.cpython-37.pyc
+byte-compiling build/bdist.linux-x86_64/egg/memsurfer/utils.py to utils.cpython-37.pyc
+byte-compiling build/bdist.linux-x86_64/egg/memsurfer/membrane.py to membrane.cpython-37.pyc
+byte-compiling build/bdist.linux-x86_64/egg/memsurfer/trimesh.py to trimesh.cpython-37.pyc
+creating stub loader for pypoisson.so
+creating stub loader for memsurfer/_memsurfer_cmod.so
+byte-compiling build/bdist.linux-x86_64/egg/pypoisson.py to pypoisson.cpython-37.pyc
+byte-compiling build/bdist.linux-x86_64/egg/memsurfer/_memsurfer_cmod.py to _memsurfer_cmod.cpython-37.pyc
+creating build/bdist.linux-x86_64/egg/EGG-INFO
+copying memsurfer.egg-info/PKG-INFO -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying memsurfer.egg-info/SOURCES.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying memsurfer.egg-info/dependency_links.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying memsurfer.egg-info/top_level.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+writing build/bdist.linux-x86_64/egg/EGG-INFO/native_libs.txt
+zip_safe flag not set; analyzing archive contents...
+__pycache__.pypoisson.cpython-37: module references __file__
+memsurfer.__pycache__._memsurfer_cmod.cpython-37: module references __file__
+creating dist
+creating 'dist/memsurfer-1.0.1-py3.7-linux-x86_64.egg' and adding 'build/bdist.linux-x86_64/egg' to it
+removing 'build/bdist.linux-x86_64/egg' (and everything under it)
+Processing memsurfer-1.0.1-py3.7-linux-x86_64.egg
+creating /gpfs/gsfs9/users/BIDS-HPC/public/software/conda/envs/memsurfer2/lib/python3.7/site-packages/memsurfer-1.0.1-py3.7-linux-x86_64.egg
+Extracting memsurfer-1.0.1-py3.7-linux-x86_64.egg to /gpfs/gsfs9/users/BIDS-HPC/public/software/conda/envs/memsurfer2/lib/python3.7/site-packages
+Adding memsurfer 1.0.1 to easy-install.pth file
+
+Installed /gpfs/gsfs9/users/BIDS-HPC/public/software/conda/envs/memsurfer2/lib/python3.7/site-packages/memsurfer-1.0.1-py3.7-linux-x86_64.egg
+Processing dependencies for memsurfer==1.0.1
+Finished processing dependencies for memsurfer==1.0.1

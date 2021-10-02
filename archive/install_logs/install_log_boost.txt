@@ -1,0 +1,15 @@
+Started: Wed Sep  8 13:58:36 EDT 2021
+[+] Loading gcc  7.3.0  ... 
+[+] Loading cmake 3.16.4  ... 
+
+> Installing MemSurfer's dependencies for (weismanal) on (cn0882). platform = (Linux)
+    > Installation path = (/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external)
+    > Using gcc = (/usr/local/GCC/7.3.0/bin/gcc) [gcc (GCC) 7.3.0]
+    > Using g++ = (/usr/local/GCC/7.3.0/bin/g++) [g++ (GCC) 7.3.0]
+    > Using python = (/data/BIDS-HPC/public/software/conda/envs/memsurfer2/bin/python) [Python 3.7.11]
+    (boost-1.66.0) Downloading (https://boostorg.jfrog.io/artifactory/main/release/1.66.0/source/boost_1_66_0.tar.gz)
+    (boost-1.66.0) Extracting (boost_1_66_0.tar)
+    (boost-1.66.0) Configuring (/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external/downloads/boost_1_66_0.tar)
+    (boost-1.66.0) Building and installing
+    (boost-1.66.0) Successfully installed at (/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer/external).
+Completed: Wed Sep  8 14:15:25 EDT 2021
