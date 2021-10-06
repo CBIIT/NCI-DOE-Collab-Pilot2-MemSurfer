@@ -1,6 +1,6 @@
 # MemSurfer installation on Biowulf
 
-For a general installation, the [instructions from LLNL should be followed](./ReadMe-LLNL.md). However, the order of installation of these dependencies, as well as their versions, is important, and overall is a difficult process. We therefore provide precise steps here for getting MemSurfer installed on NIH's Biowulf supercomputer.
+**The order of installation of MemSurfer's dependencies, as well as their versions, is important; these steps should be followed carefully.**
 
 After [logging in to Biowulf](https://hpc.nih.gov/docs/connect.html), allocate a compute node for the installation process:
 
@@ -17,7 +17,7 @@ conda create -n memsurfer python=3.7.11 numpy six mpi4py Cython=0.29.24 setuptoo
 conda activate memsurfer
 ```
 
-In a folder on the `/data` partition of Biowulf (call it `$MEMSURFER_INSTALL`), clone this repository. You will likely need to do this on Biowulf or Helix, i.e., not from a compute node, where GitHub access is limited:
+In a folder on the `/data` partition of Biowulf (export it to the `$MEMSURFER_INSTALL` variable, e.g., `export MEMSURFER_INSTALL=$(pwd)`), clone this repository. You will likely need to do this on Biowulf or Helix, i.e., not from a compute node, where GitHub access is limited:
 
 ```bash
 cd $MEMSURFER_INSTALL
@@ -54,25 +54,7 @@ and then running:
 sh install_deps.sh
 ```
 
-The next two dependencies, `eigen` and `cgal`, depend on this version of `boost`, and to ensure this installation is picked up, you should load the `boost` environment correctly by first placing the following into a file called `$MEMSURFER_INSTALL/MemSurfer/load_boost_env.sh`:
-
-```bash
-#!/bin/bash
-BOOST_HOME="$MEMSURFER_INSTALL/MemSurfer/external"
-BOOSTLIB="$BOOST_HOME/lib"
-BOOSTINC="$BOOST_HOME/include"
-export BOOSTLIB=$BOOSTLIB
-export LIBRARY_PATH="$BOOSTLIB:$LIBRARY_PATH"
-export LD_LIBRARY_PATH="$BOOSTLIB:$LD_LIBRARY_PATH"
-export LD_RUN_PATH="$BOOSTLIB:$LD_RUN_PATH"
-export CMAKE_LIBRARY_PATH="$BOOSTLIB:$CMAKE_LIBRARY_PATH"
-export CMAKE_INCLUDE_PATH="$BOOSTINC:$CMAKE_INCLUDE_PATH"
-export CPATH="$BOOSTINC:$CPATH"
-```
-
-where you have correctly exported the value of `$MEMSURFER_INSTALL` so that this script works (see [load_boost_env.sh](./load_boost_env.sh) in this directory for an example).
-
-Now source this script,
+The next two dependencies, `eigen` and `cgal`, depend on this version of `boost`, and to ensure this installation is picked up, you should load the `boost` environment correctly:
 
 ```bash
 source $MEMSURFER_INSTALL/MemSurfer/load_boost_env.sh
@@ -104,28 +86,7 @@ and run:
 sh install_deps.sh
 ```
 
-Now create a MemSurfer environment file `$MEMSURFER_INSTALL/MemSurfer/load_memsurfer_env.sh` with the contents:
-
-```bash
-#!/bin/bash
-conda activate memsurfer
-MEM_HOME=$MEMSURFER_INSTALL/MemSurfer
-module load gcc/7.3.0 cmake/3.16.4
-export CC_COMPILER=`which gcc`
-export CXX_COMPILER=`which g++`
-export PYTHONPATH=$MEM_HOME/external/lib/python3.7/site-packages:$PYTHONPATH
-export LD_LIBRARY_PATH=$MEM_HOME/external/lib:$MEM_HOME/external/lib64:$LD_LIBRARY_PATH
-export BOOST_ROOT=$MEM_HOME/external
-export VTK_ROOT=$MEM_HOME/external
-export CGAL_ROOT=$MEM_HOME/external
-export EIGEN_ROOT=$MEM_HOME/external
-source $MEM_HOME/load_boost_env.sh
-export PATH=$MEM_HOME/external2/bin:$PATH
-```
-
-where again `$MEMSURFER_INSTALL` has been exported correctly; see [load_memsurfer_env.sh](./load_memsurfer_env.sh) for an example.
-
-Finally, at least on Biowulf, a newer, correct version of `swig` needs to be installed:
+Finally, a newer version of `swig` than is available on Biowulf needs to be installed:
 
 ```bash
 source load_memsurfer_env.sh
@@ -149,7 +110,9 @@ cd $MEM_HOME
 CC=`which gcc` CXX=`which g++` LDCXXSHARED="`which g++` -bundle -undefined dynamic_lookup" python setup.py install
 ```
 
-As discussed further in the [examples](./examples) directory, the installation can be tested via:
+## Testing the installation
+
+The installation can be tested via:
 
 ```bash
 . $MEMSURFER_INSTALL/MemSurfer/load_memsurfer_env.sh

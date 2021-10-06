@@ -24,15 +24,15 @@ MemSurfer allows analysis of membranes that are highly complex and have curved g
 
 ### Components:
 
-Software: contained in this GitHub repository as well as external dependencies; see Technical Details below.
+Software: contained in this GitHub repository as well as external dependencies that are set up during installation; see Technical Details below.
 
 ### Technical Details:
 
-For a general installation, the [instructions from LLNL should be followed](./ReadMe-LLNL.md), which includes a detailed list of MemSurfer's significant number of dependencies. However, the order of installation of these dependencies, as well as their versions, is important, and overall is a difficult process. We therefore [provide precise steps](README-installation.md) for getting MemSurfer installed on NIH's Biowulf supercomputer.
+Here are the steps for [getting MemSurfer installed on NIH's Biowulf supercomputer](README-installation.md).
 
-### Examples:
+### Example:
 
-See the `examples` directory.
+A simple example is included in the `example` directory to test the installation and to demonstrate the functionality of MemSurfer; see [here](README-installation.md#testing-the-installation) for doing this as part of the installation process. The example reads a point set that represents a 2D sinusoidal surface with added noise in z-dimension and generates `*.vtp` files that can be visualized using [Paraview](https://www.paraview.org).
 
 ### License:
 
