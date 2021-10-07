@@ -21,7 +21,7 @@
 
    `export MEMSURFER_INSTALL=$(pwd)`
 
-4. In a folder on that `/data` partition, clone this repository. Do this on Biowulf or Helix (that is, not from a compute node, where GitHub access is limited):
+4. In a folder on that `/data` partition, clone this repository. Do this on Biowulf or Helix (that is, not from a Biowulf compute node, where GitHub access is limited):
 
    ```bash
    cd $MEMSURFER_INSTALL
@@ -131,3 +131,5 @@ You can test the installation via:
 cd $MEMSURFER_INSTALL/MemSurfer/examples
 python ex_simple.py
 ```
+
+If you installed Memsurfer and all dependencies correctly, &#x1F534;_**(Question: What is the expected output, that would reassure the user about installation?)**_
