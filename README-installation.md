@@ -1,6 +1,6 @@
 # MemSurfer installation on Biowulf
 
-**The order of installation of MemSurfer's dependencies, as well as their versions, is important; these steps should be followed carefully.**
+**The order of installation of MemSurfer's dependencies, as well as their versions, is important; follow these steps carefully.**
 
 1. After [logging in to Biowulf](https://hpc.nih.gov/docs/connect.html), allocate a compute node for the installation process:
 
@@ -8,7 +8,7 @@
    sinteractive --mem=2g
    ```
 
-2. After ensuring the [Miniconda package manager](https://docs.conda.io/en/latest/miniconda.html) is installed, create and activate a `memsurfer` environment:
+2. After installing the [Miniconda package manager](https://docs.conda.io/en/latest/miniconda.html), create and activate a `memsurfer` environment:
 
    ```bash
    conda activate
@@ -62,7 +62,7 @@
 
    The next two dependencies, `eigen` and `cgal`, depend on this version of `boost`.
    
-8. To ensure this installation is picked up, load the `boost` environment correctly:
+8. Load the `boost` environment so that it picks up this installation of `boost`:
 
    a. Source the following script: 
 
@@ -98,7 +98,7 @@
       sh install_deps.sh
       ```
 
-10. Finally, a newer version of `swig` than is available on Biowulf needs to be installed:
+10. Install a newer version of `swig` than is available on Biowulf:
 
     ```bash
     source load_memsurfer_env.sh
@@ -115,7 +115,7 @@
     make install
     ```
 
-11. Now all dependencies have been correctly installed, and you can install MemSurfer proper:
+11. Now that you have installed all dependencies, and you can install MemSurfer proper:
 
     ```bash
     cd $MEM_HOME
@@ -124,7 +124,7 @@
 
 ## Testing the installation
 
-The installation can be tested via:
+You can test the installation via:
 
 ```bash
 . $MEMSURFER_INSTALL/MemSurfer/load_memsurfer_env.sh
