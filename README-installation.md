@@ -1,4 +1,4 @@
-# MemSurfer installation on Biowulf
+# MemSurfer Installation on Biowulf
 
 **The order of installation of MemSurfer's dependencies, as well as their versions, is important; follow these steps carefully.**
 
@@ -21,7 +21,7 @@
 
    `export MEMSURFER_INSTALL=$(pwd)`
 
-4. In a folder on that `/data` partition, clone this repository. You will likely need to do this on Biowulf or Helix, i.e., not from a compute node, where GitHub access is limited:
+4. In a folder on that `/data` partition, clone this repository. Do this on Biowulf or Helix (that is, not from a compute node, where GitHub access is limited):
 
    ```bash
    cd $MEMSURFER_INSTALL
@@ -47,7 +47,7 @@
 
 7. Install the `boost` dependency:
 
-   a. Make these changes in `install_deps.sh`,
+   a. Make the following changes in `install_deps.sh`:
 
       ```bash
       INSTALL_VTK=false
@@ -70,7 +70,7 @@
       source $MEMSURFER_INSTALL/MemSurfer/load_boost_env.sh
       ```
 
-   b. Make these changes in `install_deps.sh`,
+   b. Make the following changes in `install_deps.sh`:
 
       ```bash
       INSTALL_BOOST=false
@@ -85,14 +85,14 @@
 
 9. Install the `cgal` dependency:
    
-   a. Make these changes in `install_deps.sh`:
+   a. Make the following changes in `install_deps.sh`:
 
       ```bash
       INSTALL_EIGEN=false
       INSTALL_CGAL=true
       ```
 
-   b. Run:
+   b. Run the following command:
 
       ```bash
       sh install_deps.sh
@@ -115,14 +115,14 @@
     make install
     ```
 
-11. Now that you have installed all dependencies, and you can install MemSurfer proper:
+11. Now that you have installed all dependencies, you can install MemSurfer proper:
 
     ```bash
     cd $MEM_HOME
     CC=`which gcc` CXX=`which g++` LDCXXSHARED="`which g++` -bundle -undefined dynamic_lookup" python setup.py install
     ```
 
-## Testing the installation
+## Testing the Installation
 
 You can test the installation via:
 
