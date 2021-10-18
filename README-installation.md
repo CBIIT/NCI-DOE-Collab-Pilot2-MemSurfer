@@ -31,7 +31,7 @@ module load gcc/7.3.0
 export CC_COMPILER=`which gcc`
 export CXX_COMPILER=`which g++`
 module load cmake/3.16.4
-MEM_HOME=`pwd`/MemSurfer
+MEM_HOME=`pwd`/NCI-DOE-Collab-Pilot2-MemSurfer
 cd $MEM_HOME
 ```
 
