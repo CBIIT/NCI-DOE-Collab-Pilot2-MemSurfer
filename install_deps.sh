@@ -79,7 +79,7 @@ _fetch() {
     rm $logname 2>/dev/null
     if ! ls $filename 1> /dev/null 2>&1 ; then
         echo "    ($modname) Downloading ($httplink)"
-        wget -o $logname $httplink
+        wget --no-check-certificate -o $logname $httplink
 
         rm -rf $dirname 2>/dev/null
     fi
