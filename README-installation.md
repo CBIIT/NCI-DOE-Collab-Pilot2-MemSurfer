@@ -57,7 +57,7 @@ sh install_deps.sh
 The next two dependencies, `eigen` and `cgal`, depend on this version of `boost`, and to ensure this installation is picked up, you should load the `boost` environment correctly:
 
 ```bash
-source $MEMSURFER_INSTALL/MemSurfer/load_boost_env.sh
+source $MEMSURFER_INSTALL/NCI-DOE-Collab-Pilot2-MemSurfer/load_boost_env.sh
 ```
 
 make these changes in `install_deps.sh`,
@@ -98,7 +98,7 @@ cd !!:1
 wget https://netactuate.dl.sourceforge.net/project/swig/swig/swig-4.0.2/swig-4.0.2.tar.gz
 tar -xvf swig-4.0.2.tar.gz
 cd swig-4.0.2
-./configure --prefix=$MEMSURFER_INSTALL/MemSurfer/external2
+./configure --prefix=$MEMSURFER_INSTALL/NCI-DOE-Collab-Pilot2-MemSurfer/external2
 make
 make install
 ```
@@ -115,7 +115,7 @@ CC=`which gcc` CXX=`which g++` LDCXXSHARED="`which g++` -bundle -undefined dynam
 The installation can be tested via:
 
 ```bash
-. $MEMSURFER_INSTALL/MemSurfer/load_memsurfer_env.sh
-cd $MEMSURFER_INSTALL/MemSurfer/examples
+. $MEMSURFER_INSTALL/NCI-DOE-Collab-Pilot2-MemSurfer/load_memsurfer_env.sh
+cd $MEMSURFER_INSTALL/NCI-DOE-Collab-Pilot2-MemSurfer/examples
 python ex_simple.py
 ```
