@@ -1,8 +1,6 @@
 #!/bin/bash
-
-source /data/BIDS-HPC/public/software/conda/etc/profile.d/conda.sh
-conda activate memsurfer2
-MEM_HOME=/home/weismanal/notebook/2021-09-08/installing_memsurfer_take_2/MemSurfer
+conda activate memsurfer
+MEM_HOME=$MEMSURFER_INSTALL/NCI-DOE-Collab-Pilot2-MemSurfer
 module load gcc/7.3.0 cmake/3.16.4
 export CC_COMPILER=`which gcc`
 export CXX_COMPILER=`which g++`
