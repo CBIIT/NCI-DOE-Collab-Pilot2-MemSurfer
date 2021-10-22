@@ -73,3 +73,6 @@ The installation can be tested via:
 cd $MEMSURFER_INSTALL/NCI-DOE-Collab-Pilot2-MemSurfer/examples
 python ex_simple.py
 ```
+
+## Preinstalled version
+Refer to this [README](README-Biowulf_preinstallation.md).
