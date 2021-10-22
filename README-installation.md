@@ -1,8 +1,16 @@
 # MemSurfer installation on Biowulf
 
+After [logging in to Biowulf](https://hpc.nih.gov/docs/connect.html) go to `/data` partition of Biowulf (export it to the `$MEMSURFER_INSTALL` variable, e.g., `export MEMSURFER_INSTALL=$(pwd)`), clone this repository. You will likely need to do this on Biowulf or Helix, i.e., not from a compute node, where GitHub access is limited:
+export MEMSURFER_INSTALL=$(pwd)
+
+```bash
+cd $MEMSURFER_INSTALL
+git clone --recursive git@github.com:CBIIT/NCI-DOE-Collab-Pilot2-MemSurfer.git
+```
+
 **The order of installation of MemSurfer's dependencies, as well as their versions, is important; these steps should be followed carefully.**
 
-After [logging in to Biowulf](https://hpc.nih.gov/docs/connect.html), allocate a compute node for the installation process:
+To allocate a compute node for the installation process:
 
 ```bash
 sinteractive --mem=2g
@@ -11,17 +19,8 @@ sinteractive --mem=2g
 After ensuring the [Miniconda package manager](https://docs.conda.io/en/latest/miniconda.html) is installed, create and activate a `memsurfer` environment:
 
 ```bash
-conda activate
-conda update -n base conda
-conda create -n memsurfer python=3.7.11 numpy six mpi4py Cython=0.29.24 setuptools
+conda env create -f environment.yml -n memsurfer
 conda activate memsurfer
-```
-
-In a folder on the `/data` partition of Biowulf (export it to the `$MEMSURFER_INSTALL` variable, e.g., `export MEMSURFER_INSTALL=$(pwd)`), clone this repository. You will likely need to do this on Biowulf or Helix, i.e., not from a compute node, where GitHub access is limited:
-
-```bash
-cd $MEMSURFER_INSTALL
-git clone --recursive git@github.com:CBIIT/NCI-DOE-Collab-Pilot2-MemSurfer.git
 ```
 
 Load some dependencies, set some environment variables, and enter the repository:
