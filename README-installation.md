@@ -34,52 +34,7 @@ MEM_HOME=`pwd`/NCI-DOE-Collab-Pilot2-MemSurfer
 cd $MEM_HOME
 ```
 
-Install the `VTK` dependency:
-
-```bash
-sh install_deps.sh
-```
-
-Install the `boost` dependency by making these changes in `install_deps.sh`,
-
-```bash
-INSTALL_VTK=false
-INSTALL_BOOST=true
-```
-
-and then running:
-
-```bash
-sh install_deps.sh
-```
-
-The next two dependencies, `eigen` and `cgal`, depend on this version of `boost`, and to ensure this installation is picked up, you should load the `boost` environment correctly:
-
-```bash
-source $MEMSURFER_INSTALL/NCI-DOE-Collab-Pilot2-MemSurfer/load_boost_env.sh
-```
-
-make these changes in `install_deps.sh`,
-
-```bash
-INSTALL_BOOST=false
-INSTALL_EIGEN=true
-```
-
-and install the `eigen` dependency:
-
-```bash
-sh install_deps.sh
-```
-
-Do the same to install the `cgal` dependency; make these changes in `install_deps.sh`:
-
-```bash
-INSTALL_EIGEN=false
-INSTALL_CGAL=true
-```
-
-and run:
+Install the `VTK`, 'boost', `eigen` and `cgal` dependencies:
 
 ```bash
 sh install_deps.sh
