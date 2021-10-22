@@ -1,6 +1,6 @@
-Preinstalled MemSurfer on Biowulf
+## Preinstalled MemSurfer on Biowulf
 
-After logging in to Biowulf allocate a compute node for the installation process:
+After logging in to [Biowulf](https://hpc.nih.gov/docs/connect.html) allocate a compute node for the installation process:
 
 sinteractive --mem=2g
 
