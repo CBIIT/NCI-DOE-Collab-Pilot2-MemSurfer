@@ -1,121 +1,135 @@
-# MemSurfer installation on Biowulf
+# MemSurfer Installation on Biowulf
 
-**The order of installation of MemSurfer's dependencies, as well as their versions, is important; these steps should be followed carefully.**
+**The order of installation of MemSurfer's dependencies, as well as their versions, is important; follow these steps carefully.**
 
-After [logging in to Biowulf](https://hpc.nih.gov/docs/connect.html), allocate a compute node for the installation process:
+1. After [logging in to Biowulf](https://hpc.nih.gov/docs/connect.html), allocate a compute node for the installation process:
 
-```bash
-sinteractive --mem=2g
-```
+   ```bash
+   sinteractive --mem=2g
+   ```
 
-After ensuring the [Miniconda package manager](https://docs.conda.io/en/latest/miniconda.html) is installed, create and activate a `memsurfer` environment:
+2. After installing the [Miniconda package manager](https://docs.conda.io/en/latest/miniconda.html), create and activate a `memsurfer` environment:
 
-```bash
-conda activate
-conda update -n base conda
-conda create -n memsurfer python=3.7.11 numpy six mpi4py Cython=0.29.24 setuptools
-conda activate memsurfer
-```
+   ```bash
+   conda activate
+   conda update -n base conda
+   conda create -n memsurfer python=3.7.11 numpy six mpi4py Cython=0.29.24 setuptools
+   conda activate memsurfer
+   ```
 
-In a folder on the `/data` partition of Biowulf (export it to the `$MEMSURFER_INSTALL` variable, e.g., `export MEMSURFER_INSTALL=$(pwd)`), clone this repository. You will likely need to do this on Biowulf or Helix, i.e., not from a compute node, where GitHub access is limited:
+3. Export the `/data` partition of Biowulf to the `$MEMSURFER_INSTALL` variable. For example: 
 
-```bash
-cd $MEMSURFER_INSTALL
-git clone --recursive git@github.com:CBIIT/NCI-DOE-Collab-Pilot2-MemSurfer.git
-```
+   `export MEMSURFER_INSTALL=$(pwd)`
 
-Load some dependencies, set some environment variables, and enter the repository:
+4. In a folder on that `/data` partition, clone this repository. Do this on Biowulf or Helix (that is, not from a Biowulf compute node, where GitHub access may be limited):
 
-```bash
-module load gcc/7.3.0
-export CC_COMPILER=`which gcc`
-export CXX_COMPILER=`which g++`
-module load cmake/3.16.4
-MEM_HOME=`pwd`/NCI-DOE-Collab-Pilot2-MemSurfer
-cd $MEM_HOME
-```
+   ```bash
+   cd $MEMSURFER_INSTALL
+   git clone --recursive git@github.com:CBIIT/NCI-DOE-Collab-Pilot2-MemSurfer.git
+   ```
 
-Install the `VTK` dependency:
+5. Load some dependencies, set some environment variables, and enter the repository:
 
-```bash
-sh install_deps.sh
-```
+   ```bash
+   module load gcc/7.3.0
+   export CC_COMPILER=`which gcc`
+   export CXX_COMPILER=`which g++`
+   module load cmake/3.16.4
+   MEM_HOME=`pwd`/NCI-DOE-Collab-Pilot2-MemSurfer
+   cd $MEM_HOME
+   ```
 
-Install the `boost` dependency by making these changes in `install_deps.sh`,
+6. Install the `VTK` dependency:
 
-```bash
-INSTALL_VTK=false
-INSTALL_BOOST=true
-```
+   ```bash
+   sh install_deps.sh
+   ```
 
-and then running:
+7. Install the `boost` dependency:
 
-```bash
-sh install_deps.sh
-```
+   a. Make the following changes in `install_deps.sh`:
 
-The next two dependencies, `eigen` and `cgal`, depend on this version of `boost`, and to ensure this installation is picked up, you should load the `boost` environment correctly:
+      ```bash
+      INSTALL_VTK=false
+      INSTALL_BOOST=true
+      ```
 
-```bash
-source $MEMSURFER_INSTALL/NCI-DOE-Collab-Pilot2-MemSurfer/load_boost_env.sh
-```
+   b. Run the following command:
 
-make these changes in `install_deps.sh`,
+      ```bash
+      sh install_deps.sh
+      ```
 
-```bash
-INSTALL_BOOST=false
-INSTALL_EIGEN=true
-```
+   The next two dependencies, `eigen` and `cgal`, depend on this version of `boost`.
+   
+8. Load the `boost` environment so that it picks up this installation of `boost`:
 
-and install the `eigen` dependency:
+   a. Source the following script: 
 
-```bash
-sh install_deps.sh
-```
+      ```bash
+      source $MEMSURFER_INSTALL/NCI-DOE-Collab-Pilot2-MemSurfer/load_boost_env.sh
+      ```
 
-Do the same to install the `cgal` dependency; make these changes in `install_deps.sh`:
+   b. Make the following changes in `install_deps.sh`:
 
-```bash
-INSTALL_EIGEN=false
-INSTALL_CGAL=true
-```
+      ```bash
+      INSTALL_BOOST=false
+      INSTALL_EIGEN=true
+      ```
 
-and run:
+   c. Install the `eigen` dependency:
 
-```bash
-sh install_deps.sh
-```
+      ```bash
+      sh install_deps.sh
+      ```
 
-Finally, a newer version of `swig` than is available on Biowulf needs to be installed:
+9. Install the `cgal` dependency:
+   
+   a. Make the following changes in `install_deps.sh`:
 
-```bash
-source load_memsurfer_env.sh
-cd $MEM_HOME
-mkdir external2
-cd !!:1
-mkdir downloads
-cd !!:1
-wget https://netactuate.dl.sourceforge.net/project/swig/swig/swig-4.0.2/swig-4.0.2.tar.gz
-tar -xvf swig-4.0.2.tar.gz
-cd swig-4.0.2
-./configure --prefix=$MEMSURFER_INSTALL/NCI-DOE-Collab-Pilot2-MemSurfer/external2
-make
-make install
-```
+      ```bash
+      INSTALL_EIGEN=false
+      INSTALL_CGAL=true
+      ```
 
-Now all dependencies have been correctly installed, and you can install MemSurfer proper:
+   b. Run the following command:
 
-```bash
-cd $MEM_HOME
-CC=`which gcc` CXX=`which g++` LDCXXSHARED="`which g++` -bundle -undefined dynamic_lookup" python setup.py install
-```
+      ```bash
+      sh install_deps.sh
+      ```
 
-## Testing the installation
+10. Install a newer version of `swig` than is available on Biowulf:
 
-The installation can be tested via:
+    ```bash
+    source load_memsurfer_env.sh
+    cd $MEM_HOME
+    mkdir external2
+    cd !!:1
+    mkdir downloads
+    cd !!:1
+    wget https://netactuate.dl.sourceforge.net/project/swig/swig/swig-4.0.2/swig-4.0.2.tar.gz
+    tar -xvf swig-4.0.2.tar.gz
+    cd swig-4.0.2
+    ./configure --prefix=$MEMSURFER_INSTALL/NCI-DOE-Collab-Pilot2-MemSurfer/external2
+    make
+    make install
+    ```
+
+11. Now that you have installed all dependencies, you can install MemSurfer proper:
+
+    ```bash
+    cd $MEM_HOME
+    CC=`which gcc` CXX=`which g++` LDCXXSHARED="`which g++` -bundle -undefined dynamic_lookup" python setup.py install
+    ```
+
+## Testing the Installation
+
+You can test the installation via:
 
 ```bash
 . $MEMSURFER_INSTALL/NCI-DOE-Collab-Pilot2-MemSurfer/load_memsurfer_env.sh
 cd $MEMSURFER_INSTALL/NCI-DOE-Collab-Pilot2-MemSurfer/examples
 python ex_simple.py
 ```
+
+If you installed Memsurfer and all dependencies correctly, the example will generate `*.vtp` files that you can visualize using [Paraview](https://www.paraview.org).
