@@ -49,7 +49,7 @@ mkdir external2
 cd !!:1
 mkdir downloads
 cd !!:1
-wget https://netactuate.dl.sourceforge.net/project/swig/swig/swig-4.0.2/swig-4.0.2.tar.gz
+wget https://netactuate.dl.sourceforge.net/project/swig/swig/swig-4.0.2/swig-4.0.2.tar.gz --no-check-certificate
 tar -xvf swig-4.0.2.tar.gz
 cd swig-4.0.2
 ./configure --prefix=$MEMSURFER_INSTALL/NCI-DOE-Collab-Pilot2-MemSurfer/external2
