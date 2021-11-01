@@ -132,4 +132,4 @@ cd $MEMSURFER_INSTALL/NCI-DOE-Collab-Pilot2-MemSurfer/examples
 python ex_simple.py
 ```
 
-If you installed Memsurfer and all dependencies correctly, the example will generate `*.vtp` files that you can visualize using [Paraview](https://www.paraview.org).
+If you installed Memsurfer and all dependencies correctly, the example generates `*.vtp` files that you can visualize using [Paraview](https://www.paraview.org).
