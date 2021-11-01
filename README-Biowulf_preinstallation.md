@@ -6,6 +6,7 @@ sinteractive --mem=2g
 
 ## Creating Conda environment
 conda env create -f environment.yml -n memsurfer
+
 conda activate memsurfer
 
 ## Setting the path to the preinstalled directory
