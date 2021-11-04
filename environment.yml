@@ -1,0 +1,11 @@
+name: memsurfer
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.7.11
+  - numpy
+  - six
+  - mpi4py
+  - Cython=0.29.24
+  - setuptools
