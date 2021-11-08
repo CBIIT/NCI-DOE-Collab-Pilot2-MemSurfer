@@ -39,14 +39,15 @@ sh install_deps.sh
 ```
 
 6. Finally, a newer version of `swig` than is available on Biowulf needs to be loaded:
+
 ```module load swig/4.0.2```
  
-8. Export the `/data/$USER/NCI-DOE-Collab-Pilot2-MemSurfer` partition of Biowulf to the `$MEMSURFER_HOME` variable. For example: 
+7. Export the `/data/$USER/NCI-DOE-Collab-Pilot2-MemSurfer` partition of Biowulf to the `$MEMSURFER_HOME` variable. For example: 
 
    `export MEMSURFER_HOME=$(pwd)`
 
 
-11. Now that you have installed all dependencies, you can install MemSurfer proper:
+8. Now that you have installed all dependencies, you can install MemSurfer proper:
 
     ```bash
     cd $MEM_HOME
