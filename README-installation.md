@@ -14,7 +14,7 @@
    
       ```export MEMSURFER_INSTALL=$(pwd)```
 
-   You will likely need to do this on Biowulf or Helix, that is, not from a compute node, where GitHub access is limited.
+   Do this on Biowulf or Helix, that is, not from a Biowulf compute node, where GitHub access is limited.
  
 3. Clone this repository: 
 
@@ -22,12 +22,12 @@
    cd $MEMSURFER_INSTALL
    git clone --recursive git@github.com:CBIIT/NCI-DOE-Collab-Pilot2-MemSurfer.git
    ```
-2. To allocate a compute node for the installation process:
+2. Allocate a compute node for the installation process:
 
    ```bash
    sinteractive --mem=2g
    ```
-3. After ensuring the [Miniconda package manager](https://docs.conda.io/en/latest/miniconda.html) is installed, create and activate a `memsurfer` environment:
+3. Install the [Miniconda package manager](https://docs.conda.io/en/latest/miniconda.html), create and activate a `memsurfer` environment:
 
    ```bash
    conda env create -f environment.yml -n memsurfer
@@ -51,7 +51,7 @@
    sh install_deps.sh
    ```
 
-6. Finally, a newer version of `swig` than is available on Biowulf needs to be loaded:
+6. Load version 4.0.2 of `swig`. This is a newer version than is available on Biowulf:
 
    ```module load swig/4.0.2```
  
