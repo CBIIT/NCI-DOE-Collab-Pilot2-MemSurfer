@@ -14,7 +14,7 @@
    
       ```export MEMSURFER_INSTALL=$(pwd)```
 
-   Do this on Biowulf or Helix, that is, not from a Biowulf compute node, where GitHub access is limited.
+   Do this on Biowulf or Helix. (That is, not from a Biowulf compute node, where GitHub access is limited.)
  
 3. Clone this repository: 
 
@@ -27,7 +27,7 @@
    ```bash
    sinteractive --mem=2g
    ```
-3. Install the [Miniconda package manager](https://docs.conda.io/en/latest/miniconda.html), create and activate a `memsurfer` environment:
+3. Install the [Miniconda package manager](https://docs.conda.io/en/latest/miniconda.html). Create and activate a `memsurfer` environment:
 
    ```bash
    conda env create -f environment.yml -n memsurfer
@@ -45,7 +45,7 @@
    cd $MEM_HOME
    ```
 
-5. Install the `VTK`, 'boost', `eigen` and `cgal` dependencies:
+5. Install the `VTK`, `boost`, `eigen`, and `cgal` dependencies:
 
    ```bash
    sh install_deps.sh
@@ -79,5 +79,5 @@ python ex_simple.py
 
 If you installed Memsurfer and all dependencies correctly, the example generates `*.vtp` files that you can visualize using [Paraview](https://www.paraview.org).
 
-## Preinstalled version
+## Preinstalled Version
 Refer to this [README](README-Biowulf_preinstallation.md).
