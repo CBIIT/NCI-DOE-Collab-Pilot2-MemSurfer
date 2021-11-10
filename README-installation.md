@@ -2,8 +2,11 @@
 
 **The order of installation of MemSurfer's dependencies, as well as their versions, is important; follow these steps carefully.**
 
-1. After [logging in to Biowulf](https://hpc.nih.gov/docs/connect.html) go to `/data` partition of Biowulf (eg: ```cd /data/$USER/export```; And then export it to the `$MEMSURFER_INSTALL` variable, e.g., `export MEMSURFER_INSTALL=$(pwd)`), clone this repository. You will likely need to do this on Biowulf or Helix, i.e., not from a compute node, where GitHub access is limited:
-export MEMSURFER_INSTALL=$(pwd)
+1. Log in to [Biowulf](https://hpc.nih.gov/docs/connect.html). 
+
+2. Go to `/data` partition of Biowulf (eg: ```cd /data/$USER/export```; And then export it to the `$MEMSURFER_INSTALL` variable, e.g., `export MEMSURFER_INSTALL=$(pwd)`). You will likely need to do this on Biowulf or Helix, i.e., not from a compute node, where GitHub access is limited.
+ 
+3. Clone this repository: 
 
    ```bash
    cd $MEMSURFER_INSTALL
