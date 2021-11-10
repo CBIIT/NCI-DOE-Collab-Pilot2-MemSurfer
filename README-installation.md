@@ -4,7 +4,17 @@
 
 1. Log in to [Biowulf](https://hpc.nih.gov/docs/connect.html). 
 
-2. Go to `/data` partition of Biowulf (eg: ```cd /data/$USER/export```; And then export it to the `$MEMSURFER_INSTALL` variable, e.g., `export MEMSURFER_INSTALL=$(pwd)`). You will likely need to do this on Biowulf or Helix, i.e., not from a compute node, where GitHub access is limited.
+2. Go to the `/data` partition of Biowulf. eg: 
+
+   1. Run the following command:
+   
+      ```cd /data/$USER/export```
+   
+   2. Export it to the `$MEMSURFER_INSTALL` variable. e.g.: 
+   
+      ```export MEMSURFER_INSTALL=$(pwd)```
+
+   You will likely need to do this on Biowulf or Helix, i.e., not from a compute node, where GitHub access is limited.
  
 3. Clone this repository: 
 
