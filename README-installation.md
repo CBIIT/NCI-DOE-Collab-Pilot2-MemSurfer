@@ -79,5 +79,3 @@ python ex_simple.py
 
 If you installed Memsurfer and all dependencies correctly, the example generates `*.vtp` files that you can visualize using [Paraview](https://www.paraview.org).
 
-## Preinstalled Version
-Refer to this [README](README-Biowulf_preinstallation.md).
