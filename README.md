@@ -20,8 +20,10 @@ MemSurfer allows analysis of membranes that are highly complex and have curved g
 
 ### Components and Technical Details
 
-Software contained in this GitHub repository as well as external dependencies that you need to set up (very carefully) during installation. For instructions, refer to [MemSurfer Installation on Biowulf](README-installation.md), based on instructions from Lawrence Livermore National Laboratory (LLNL).
-
+To use the software contained in this GitHub repository, choose one of the following options:
+ * If you want to use MemSurfer without installation, you can access the [Preinstalled MemSurfer on Biowulf](README-Biowulf_preinstallation.md). 
+ * If you want to modify the code for your purposes, you can (very carefully) install a copy of MemSurfer and external dependencies using [MemSurfer Installation on Biowulf](README-installation.md), based on instructions from Lawrence Livermore National Laboratory (LLNL).  
+ 
 ### Example
 
 The [example](/example) directory includes a simple example to test the installation and to demonstrate the functionality of MemSurfer. (The [MemSurfer Installation on Biowulf](README-installation.md) also contains a section on testing the installation process.) The example reads a point set that represents a 2D sinusoidal surface with added noise in z-dimension and generates `*.vtp` files that you can visualize using [Paraview](https://www.paraview.org).
