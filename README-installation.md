@@ -2,19 +2,32 @@
 
 **The order of installation of MemSurfer's dependencies, as well as their versions, is important; follow these steps carefully.**
 
-1. After [logging in to Biowulf](https://hpc.nih.gov/docs/connect.html) go to `/data` partition of Biowulf (eg: ```cd /data/$USER/export```; And then export it to the `$MEMSURFER_INSTALL` variable, e.g., `export MEMSURFER_INSTALL=$(pwd)`), clone this repository. You will likely need to do this on Biowulf or Helix, i.e., not from a compute node, where GitHub access is limited:
-export MEMSURFER_INSTALL=$(pwd)
+1. Log in to [Biowulf](https://hpc.nih.gov/docs/connect.html). 
+
+2. Go to the `/data` partition of Biowulf. For example: 
+
+   1. Run the following command:
+   
+      ```cd /data/$USER/export```
+   
+   2. Export it to the `$MEMSURFER_INSTALL` variable. For example: 
+   
+      ```export MEMSURFER_INSTALL=$(pwd)```
+
+   Do this on Biowulf or Helix. (That is, not from a Biowulf compute node, where GitHub access is limited.)
+ 
+3. Clone this repository: 
 
    ```bash
    cd $MEMSURFER_INSTALL
    git clone --recursive git@github.com:CBIIT/NCI-DOE-Collab-Pilot2-MemSurfer.git
    ```
-2. To allocate a compute node for the installation process:
+2. Allocate a compute node for the installation process:
 
    ```bash
    sinteractive --mem=2g
    ```
-3. After ensuring the [Miniconda package manager](https://docs.conda.io/en/latest/miniconda.html) is installed, create and activate a `memsurfer` environment:
+3. Install the [Miniconda package manager](https://docs.conda.io/en/latest/miniconda.html). Create and activate a `memsurfer` environment:
 
    ```bash
    conda env create -f environment.yml -n memsurfer
@@ -32,13 +45,13 @@ export MEMSURFER_INSTALL=$(pwd)
    cd $MEM_HOME
    ```
 
-5. Install the `VTK`, 'boost', `eigen` and `cgal` dependencies:
+5. Install the `VTK`, `boost`, `eigen`, and `cgal` dependencies:
 
    ```bash
    sh install_deps.sh
    ```
 
-6. Finally, a newer version of `swig` than is available on Biowulf needs to be loaded:
+6. Load version 4.0.2 of `swig`. This is a newer version than is available on Biowulf:
 
    ```module load swig/4.0.2```
  
@@ -65,6 +78,3 @@ python ex_simple.py
 ```
 
 If you installed Memsurfer and all dependencies correctly, the example generates `*.vtp` files that you can visualize using [Paraview](https://www.paraview.org).
-
-## Preinstalled version
-Refer to this [README](README-Biowulf_preinstallation.md).
